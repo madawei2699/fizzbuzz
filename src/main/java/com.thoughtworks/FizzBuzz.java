@@ -11,13 +11,16 @@ public class FizzBuzz {
 
     public static String fizzBuzz(int digit) {
         String result = "";
-        if (String.valueOf(digit).contains("3")) {
+        if (String.valueOf(digit).contains("3") && !String.valueOf(digit).contains("5")) {
             return "Fizz";
         }
-        if (digit % 3 == 0) {
+        if (digit % 3 == 0 && !String.valueOf(digit).contains("5")) {
             result += "Fizz";
         }
-        if (digit % 5 == 0) {
+        if (digit % 3 == 0 && String.valueOf(digit).contains("7")) {
+            result += "Fizz";
+        }
+        if (digit % 5 == 0 && !String.valueOf(digit).contains("7")) {
             result += "Buzz";
         }
         if (digit % 7 == 0) {
