@@ -11,6 +11,9 @@ public class FizzBuzz {
 
     public static String fizzBuzz(int digit) {
         String result = "";
+        if (String.valueOf(digit).contains("3")) {
+            return "Fizz";
+        }
         if (digit % 3 == 0) {
             result += "Fizz";
         }

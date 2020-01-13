@@ -64,7 +64,7 @@ public class FizzBuzzTest {
     public void should_return_BuzzWhizz_when_given_input_can_be_divided_by_5_and_7() {
         // given
         // when
-        String actual = FizzBuzz.fizzBuzz(5 * 7);
+        String actual = FizzBuzz.fizzBuzz(70);
         // then
         assertEquals("BuzzWhizz", actual);
     }
@@ -76,5 +76,55 @@ public class FizzBuzzTest {
         String actual = FizzBuzz.fizzBuzz(3 * 5 * 7);
         // then
         assertEquals("FizzBuzzWhizz", actual);
+    }
+
+    @Test
+    // 学生报数时，如果所报数字包含了3，那么也不能说该数字，而是要说相应的单词，比如要报13的同学应该说Fizz。
+    public void should_return_Fizz_when_given_input_contains_3() {
+        // given
+        // when
+        String actual = FizzBuzz.fizzBuzz(32);
+        // then
+        assertEquals("Fizz", actual);
+    }
+
+    @Test
+    // 如果数字中包含了3，那么忽略规则2和规则3，比如要报30的同学只报Fizz，不报FizzBuzz。
+    public void should_return_Fizz_when_given_input_contains_3_can_be_divided_by_5() {
+        // given
+        // when
+        String actual = FizzBuzz.fizzBuzz(30);
+        // then
+        assertEquals("Fizz", actual);
+    }
+
+    @Test
+    // 如果数字中包含了3，那么忽略规则2和规则3，比如要报30的同学只报Fizz，不报FizzBuzz。
+    public void should_return_Fizz_when_given_input_contains_3_can_be_divided_by_7() {
+        // given
+        // when
+        String actual = FizzBuzz.fizzBuzz(35);
+        // then
+        assertEquals("Fizz", actual);
+    }
+
+    @Test
+    // 如果数字中包含了3，那么忽略规则2和规则3，比如要报30的同学只报Fizz，不报FizzBuzz。
+    public void should_return_Fizz_when_given_input_contains_3_can_be_divided_by_5_and_7() {
+        // given
+        // when
+        String actual = FizzBuzz.fizzBuzz(35);
+        // then
+        assertEquals("Fizz", actual);
+    }
+
+    @Test
+    // 如果数字中包含了3，那么忽略规则2和规则3，比如要报30的同学只报Fizz，不报FizzBuzz。
+    public void should_return_Fizz_when_given_input_contains_3_can_be_divided_by_3_and_5_and_7() {
+        // given
+        // when
+        String actual = FizzBuzz.fizzBuzz(315);
+        // then
+        assertEquals("Fizz", actual);
     }
 }
