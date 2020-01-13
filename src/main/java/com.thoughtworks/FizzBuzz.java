@@ -10,15 +10,16 @@ public class FizzBuzz {
     }
 
     public static String fizzBuzz(int digit) {
+        String result = "";
         if (digit % 3 == 0) {
-            return "Fizz";
+            result += "Fizz";
         }
         if (digit % 5 == 0) {
-            return "Buzz";
+            result += "Buzz";
         }
         if (digit % 7 == 0) {
-            return "Whizz";
+            result += "Whizz";
         }
-        return String.valueOf(digit);
+        return result != "" ? result : String.valueOf(digit);
     }
 }
