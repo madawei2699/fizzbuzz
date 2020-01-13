@@ -11,19 +11,17 @@ public class FizzBuzz {
 
     public static String fizzBuzz(int digit) {
         String result = "";
-        if (String.valueOf(digit).contains("3") && !String.valueOf(digit).contains("5")) {
+
+        if (Rule.R3.isContain(digit) && !Rule.R5.isContain(digit)) {
             return "Fizz";
         }
-        if (digit % 3 == 0 && !String.valueOf(digit).contains("5")) {
+        if (Rule.R3.isValid(digit) && (!Rule.R5.isContain(digit) || Rule.R7.isContain(digit))) {
             result += "Fizz";
         }
-        if (digit % 3 == 0 && String.valueOf(digit).contains("7")) {
-            result += "Fizz";
-        }
-        if (digit % 5 == 0 && !String.valueOf(digit).contains("7")) {
+        if (Rule.R5.isValid(digit) && !Rule.R7.isContain(digit)) {
             result += "Buzz";
         }
-        if (digit % 7 == 0) {
+        if (Rule.R7.isValid(digit)) {
             result += "Whizz";
         }
         return !result.equals("") ? result : String.valueOf(digit);
