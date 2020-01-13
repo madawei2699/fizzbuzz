@@ -20,6 +20,6 @@ public class FizzBuzz {
         if (digit % 7 == 0) {
             result += "Whizz";
         }
-        return result != "" ? result : String.valueOf(digit);
+        return !result.equals("") ? result : String.valueOf(digit);
     }
 }
