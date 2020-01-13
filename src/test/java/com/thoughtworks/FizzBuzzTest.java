@@ -143,7 +143,6 @@ public class FizzBuzzTest {
     }
 
     @Test
-    // 如果数字中包含了5，那么忽略规则4和规则5，并且忽略被3整除的判定，比如要报35的同学不报Fizz，报BuzzWhizz。
     public void should_return_BuzzWhizz_when_given_input_contains_5_can_be_divided_by_5_and_7() {
         // given
         // when
