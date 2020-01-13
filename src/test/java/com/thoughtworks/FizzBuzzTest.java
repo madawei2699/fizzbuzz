@@ -41,4 +41,40 @@ public class FizzBuzzTest {
         // then
         assertEquals("Whizz", actual);
     }
+
+    @Test
+    public void should_return_FizzBuzz_when_given_input_can_be_divided_by_3_and_5() {
+        // given
+        // when
+        String actual = FizzBuzz.fizzBuzz(15);
+        // then
+        assertEquals("FizzBuzz", actual);
+    }
+
+    @Test
+    public void should_return_FizzWhizz_when_given_input_can_be_divided_by_3_and_7() {
+        // given
+        // when
+        String actual = FizzBuzz.fizzBuzz(3 * 7);
+        // then
+        assertEquals("FizzWhizz", actual);
+    }
+
+    @Test
+    public void should_return_BuzzWhizz_when_given_input_can_be_divided_by_5_and_7() {
+        // given
+        // when
+        String actual = FizzBuzz.fizzBuzz(5 * 7);
+        // then
+        assertEquals("BuzzWhizz", actual);
+    }
+
+    @Test
+    public void should_return_FizzBuzzWhizz_when_given_input_can_be_divided_by_5_and_7() {
+        // given
+        // when
+        String actual = FizzBuzz.fizzBuzz(3 * 5 * 7);
+        // then
+        assertEquals("FizzBuzzWhizz", actual);
+    }
 }
